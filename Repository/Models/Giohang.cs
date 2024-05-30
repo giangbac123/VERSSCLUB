@@ -5,7 +5,7 @@ namespace Repository.Models;
 
 public partial class Giohang
 {
-    public Guid Makh { get; set; }
+    public string Makh { get; set; } = null!;
 
     public virtual Khachhang MakhNavigation { get; set; } = null!;
 }

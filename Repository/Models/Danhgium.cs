@@ -3,21 +3,23 @@ using System.Collections.Generic;
 
 namespace Repository.Models;
 
-public partial class Giohangct
+public partial class Danhgium
 {
-    public string Maghct { get; set; } = null!;
+    public string Madanhgia { get; set; } = null!;
 
     public string Makh { get; set; } = null!;
 
     public string Maspct { get; set; } = null!;
 
-    public int Soluong { get; set; }
+    public string? Binhluan { get; set; }
 
-    public double Tongtien { get; set; }
+    public string? Hinhanh { get; set; }
+
+    public DateOnly Ngaydang { get; set; }
+
+    public int? Sosao { get; set; }
 
     public virtual Khachhang MakhNavigation { get; set; } = null!;
 
     public virtual Sanphamct MaspctNavigation { get; set; } = null!;
-
-    public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }

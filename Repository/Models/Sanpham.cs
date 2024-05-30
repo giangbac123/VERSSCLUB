@@ -5,9 +5,9 @@ namespace Repository.Models;
 
 public partial class Sanpham
 {
-    public Guid Masp { get; set; }
+    public string Masp { get; set; } = null!;
 
-    public string? Tensanpham { get; set; }
+    public string Tensp { get; set; } = null!;
 
     public string Trangthai { get; set; } = null!;
 

@@ -5,9 +5,9 @@ namespace Repository.Models;
 
 public partial class Chatlieu
 {
-    public Guid Machatlieu { get; set; }
+    public string Machatlieu { get; set; } = null!;
 
-    public string? Tenchatlieu { get; set; }
+    public string Tenchatlieu { get; set; } = null!;
 
     public virtual ICollection<Sanphamct> Sanphamcts { get; set; } = new List<Sanphamct>();
 }
