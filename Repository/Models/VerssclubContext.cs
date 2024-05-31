@@ -57,13 +57,13 @@ public partial class VerssclubContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=hoangthanhgiang\\sqlexpress;Initial Catalog=VERSSCLUB;Integrated Security=True;Trust Server Certificate=True");
+        => optionsBuilder.UseSqlServer("Data Source=hoangthanhgiang\\sqlexpress;Initial Catalog=VERSSCLUB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Chatlieu>(entity =>
         {
-            entity.HasKey(e => e.Machatlieu).HasName("PK__CHATLIEU__80F939F813A47416");
+            entity.HasKey(e => e.Machatlieu).HasName("PK__CHATLIEU__80F939F859DE3E74");
 
             entity.ToTable("CHATLIEU");
 
@@ -78,7 +78,7 @@ public partial class VerssclubContext : DbContext
 
         modelBuilder.Entity<Chucvu>(entity =>
         {
-            entity.HasKey(e => e.Machucvu).HasName("PK__CHUCVU__9FA9FD6A7CBD95BE");
+            entity.HasKey(e => e.Machucvu).HasName("PK__CHUCVU__9FA9FD6A63B82CA5");
 
             entity.ToTable("CHUCVU");
 
@@ -93,7 +93,7 @@ public partial class VerssclubContext : DbContext
 
         modelBuilder.Entity<Danhgium>(entity =>
         {
-            entity.HasKey(e => e.Madanhgia).HasName("PK__DANHGIA__8597D60A7BE0A90B");
+            entity.HasKey(e => e.Madanhgia).HasName("PK__DANHGIA__8597D60A651052BC");
 
             entity.ToTable("DANHGIA");
 
@@ -119,17 +119,17 @@ public partial class VerssclubContext : DbContext
             entity.HasOne(d => d.MakhNavigation).WithMany(p => p.Danhgia)
                 .HasForeignKey(d => d.Makh)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__DANHGIA__MAKH__1BC821DD");
+                .HasConstraintName("FK__DANHGIA__MAKH__4D94879B");
 
             entity.HasOne(d => d.MaspctNavigation).WithMany(p => p.Danhgia)
                 .HasForeignKey(d => d.Maspct)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__DANHGIA__MASPCT__1CBC4616");
+                .HasConstraintName("FK__DANHGIA__MASPCT__4E88ABD4");
         });
 
         modelBuilder.Entity<Giohang>(entity =>
         {
-            entity.HasKey(e => e.Makh).HasName("PK__GIOHANG__603F592CB7F9DAF2");
+            entity.HasKey(e => e.Makh).HasName("PK__GIOHANG__603F592C86B59871");
 
             entity.ToTable("GIOHANG");
 
@@ -146,7 +146,7 @@ public partial class VerssclubContext : DbContext
 
         modelBuilder.Entity<Giohangct>(entity =>
         {
-            entity.HasKey(e => e.Maghct).HasName("PK__GIOHANGC__0CCE71FE27BF5E53");
+            entity.HasKey(e => e.Maghct).HasName("PK__GIOHANGC__0CCE71FEB37E77F4");
 
             entity.ToTable("GIOHANGCT");
 
@@ -168,17 +168,17 @@ public partial class VerssclubContext : DbContext
             entity.HasOne(d => d.MakhNavigation).WithMany(p => p.Giohangcts)
                 .HasForeignKey(d => d.Makh)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__GIOHANGCT__MAKH__123EB7A3");
+                .HasConstraintName("FK__GIOHANGCT__MAKH__440B1D61");
 
             entity.HasOne(d => d.MaspctNavigation).WithMany(p => p.Giohangcts)
                 .HasForeignKey(d => d.Maspct)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__GIOHANGCT__MASPC__1332DBDC");
+                .HasConstraintName("FK__GIOHANGCT__MASPC__44FF419A");
         });
 
         modelBuilder.Entity<Hoadon>(entity =>
         {
-            entity.HasKey(e => e.Mahd).HasName("PK__HOADON__603F20CE82D3DF24");
+            entity.HasKey(e => e.Mahd).HasName("PK__HOADON__603F20CEBE120F43");
 
             entity.ToTable("HOADON");
 
@@ -212,22 +212,22 @@ public partial class VerssclubContext : DbContext
             entity.HasOne(d => d.MagiamgiaNavigation).WithMany(p => p.Hoadons)
                 .HasForeignKey(d => d.Magiamgia)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__HOADON__MAGIAMGI__25518C17");
+                .HasConstraintName("FK__HOADON__MAGIAMGI__571DF1D5");
 
             entity.HasOne(d => d.MakhNavigation).WithMany(p => p.Hoadons)
                 .HasForeignKey(d => d.Makh)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__HOADON__MAKH__236943A5");
+                .HasConstraintName("FK__HOADON__MAKH__5535A963");
 
             entity.HasOne(d => d.ManvNavigation).WithMany(p => p.Hoadons)
                 .HasForeignKey(d => d.Manv)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__HOADON__MANV__245D67DE");
+                .HasConstraintName("FK__HOADON__MANV__5629CD9C");
         });
 
         modelBuilder.Entity<Hoadonct>(entity =>
         {
-            entity.HasKey(e => e.Mahdct).HasName("PK__HOADONCT__1A700082BC549E62");
+            entity.HasKey(e => e.Mahdct).HasName("PK__HOADONCT__1A700082B03A597D");
 
             entity.ToTable("HOADONCT");
 
@@ -252,17 +252,17 @@ public partial class VerssclubContext : DbContext
             entity.HasOne(d => d.MahdNavigation).WithMany(p => p.Hoadoncts)
                 .HasForeignKey(d => d.Mahd)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__HOADONCT__MAHD__282DF8C2");
+                .HasConstraintName("FK__HOADONCT__MAHD__59FA5E80");
 
             entity.HasOne(d => d.MaspctNavigation).WithMany(p => p.Hoadoncts)
                 .HasForeignKey(d => d.Maspct)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__HOADONCT__MASPCT__29221CFB");
+                .HasConstraintName("FK__HOADONCT__MASPCT__5AEE82B9");
         });
 
         modelBuilder.Entity<Khachhang>(entity =>
         {
-            entity.HasKey(e => e.Makh).HasName("PK__KHACHHAN__603F592C6C33E491");
+            entity.HasKey(e => e.Makh).HasName("PK__KHACHHAN__603F592C7A2F8725");
 
             entity.ToTable("KHACHHANG");
 
@@ -316,7 +316,7 @@ public partial class VerssclubContext : DbContext
 
         modelBuilder.Entity<Loai>(entity =>
         {
-            entity.HasKey(e => e.Maloai).HasName("PK__LOAI__2F633F23A1F0FFF5");
+            entity.HasKey(e => e.Maloai).HasName("PK__LOAI__2F633F233194CD20");
 
             entity.ToTable("LOAI");
 
@@ -331,7 +331,7 @@ public partial class VerssclubContext : DbContext
 
         modelBuilder.Entity<Mau>(entity =>
         {
-            entity.HasKey(e => e.Mamau).HasName("PK__MAU__7B7346CF71E376BB");
+            entity.HasKey(e => e.Mamau).HasName("PK__MAU__7B7346CF4EDAB570");
 
             entity.ToTable("MAU");
 
@@ -346,7 +346,7 @@ public partial class VerssclubContext : DbContext
 
         modelBuilder.Entity<Nhanvien>(entity =>
         {
-            entity.HasKey(e => e.Manv).HasName("PK__NHANVIEN__603F511490E3C095");
+            entity.HasKey(e => e.Manv).HasName("PK__NHANVIEN__603F511417A7B9BB");
 
             entity.ToTable("NHANVIEN");
 
@@ -382,12 +382,12 @@ public partial class VerssclubContext : DbContext
             entity.HasOne(d => d.MachucvuNavigation).WithMany(p => p.Nhanviens)
                 .HasForeignKey(d => d.Machucvu)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__NHANVIEN__MACHUC__778AC167");
+                .HasConstraintName("FK__NHANVIEN__MACHUC__286302EC");
         });
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.Maorder).HasName("PK__ORDER__C8361541EDBF2273");
+            entity.HasKey(e => e.Maorder).HasName("PK__ORDER__C8361541552B4F2B");
 
             entity.ToTable("ORDER");
 
@@ -414,17 +414,17 @@ public partial class VerssclubContext : DbContext
             entity.HasOne(d => d.MaghctNavigation).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.Maghct)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ORDER__MAGHCT__1F98B2C1");
+                .HasConstraintName("FK__ORDER__MAGHCT__5165187F");
 
             entity.HasOne(d => d.ManvNavigation).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.Manv)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ORDER__MANV__208CD6FA");
+                .HasConstraintName("FK__ORDER__MANV__52593CB8");
         });
 
         modelBuilder.Entity<Productdiscount>(entity =>
         {
-            entity.HasKey(e => e.Madiscounts).HasName("PK__PRODUCTD__CC3E72D0C63B4F46");
+            entity.HasKey(e => e.Madiscounts).HasName("PK__PRODUCTD__CC3E72D04981D3A8");
 
             entity.ToTable("PRODUCTDISCOUNTS");
 
@@ -454,12 +454,12 @@ public partial class VerssclubContext : DbContext
             entity.HasOne(d => d.MaspctNavigation).WithMany(p => p.Productdiscounts)
                 .HasForeignKey(d => d.Maspct)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__PRODUCTDI__MASPC__2EDAF651");
+                .HasConstraintName("FK__PRODUCTDI__MASPC__60A75C0F");
         });
 
         modelBuilder.Entity<Sanpham>(entity =>
         {
-            entity.HasKey(e => e.Masp).HasName("PK__SANPHAM__60228A32309B7F3D");
+            entity.HasKey(e => e.Masp).HasName("PK__SANPHAM__60228A32C0ACF9A8");
 
             entity.ToTable("SANPHAM");
 
@@ -467,17 +467,53 @@ public partial class VerssclubContext : DbContext
                 .HasMaxLength(10)
                 .IsUnicode(false)
                 .HasColumnName("MASP");
+            entity.Property(e => e.Machatlieu)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .HasColumnName("MACHATLIEU");
+            entity.Property(e => e.Maloai)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .HasColumnName("MALOAI");
+            entity.Property(e => e.Mathuonghieu)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .HasColumnName("MATHUONGHIEU");
+            entity.Property(e => e.Maxuatxu)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .HasColumnName("MAXUATXU");
             entity.Property(e => e.Tensp)
                 .HasMaxLength(50)
                 .HasColumnName("TENSP");
             entity.Property(e => e.Trangthai)
                 .HasMaxLength(50)
                 .HasColumnName("TRANGTHAI");
+
+            entity.HasOne(d => d.MachatlieuNavigation).WithMany(p => p.Sanphams)
+                .HasForeignKey(d => d.Machatlieu)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__SANPHAM__MACHATL__36B12243");
+
+            entity.HasOne(d => d.MaloaiNavigation).WithMany(p => p.Sanphams)
+                .HasForeignKey(d => d.Maloai)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__SANPHAM__MALOAI__398D8EEE");
+
+            entity.HasOne(d => d.MathuonghieuNavigation).WithMany(p => p.Sanphams)
+                .HasForeignKey(d => d.Mathuonghieu)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__SANPHAM__MATHUON__38996AB5");
+
+            entity.HasOne(d => d.MaxuatxuNavigation).WithMany(p => p.Sanphams)
+                .HasForeignKey(d => d.Maxuatxu)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__SANPHAM__MAXUATX__37A5467C");
         });
 
         modelBuilder.Entity<Sanphamct>(entity =>
         {
-            entity.HasKey(e => e.Maspct).HasName("PK__SANPHAMC__3D158D86DA3BE69C");
+            entity.HasKey(e => e.Maspct).HasName("PK__SANPHAMC__3D158D8655F960C8");
 
             entity.ToTable("SANPHAMCT");
 
@@ -489,14 +525,6 @@ public partial class VerssclubContext : DbContext
             entity.Property(e => e.Imgurl)
                 .IsUnicode(false)
                 .HasColumnName("IMGURL");
-            entity.Property(e => e.Machatlieu)
-                .HasMaxLength(10)
-                .IsUnicode(false)
-                .HasColumnName("MACHATLIEU");
-            entity.Property(e => e.Maloai)
-                .HasMaxLength(10)
-                .IsUnicode(false)
-                .HasColumnName("MALOAI");
             entity.Property(e => e.Mamau)
                 .HasMaxLength(10)
                 .IsUnicode(false)
@@ -509,58 +537,30 @@ public partial class VerssclubContext : DbContext
                 .HasMaxLength(10)
                 .IsUnicode(false)
                 .HasColumnName("MASP");
-            entity.Property(e => e.Mathuonghieu)
-                .HasMaxLength(10)
-                .IsUnicode(false)
-                .HasColumnName("MATHUONGHIEU");
-            entity.Property(e => e.Maxuatxu)
-                .HasMaxLength(10)
-                .IsUnicode(false)
-                .HasColumnName("MAXUATXU");
             entity.Property(e => e.Soluong).HasColumnName("SOLUONG");
             entity.Property(e => e.Trangthai)
                 .HasMaxLength(50)
                 .HasColumnName("TRANGTHAI");
 
-            entity.HasOne(d => d.MachatlieuNavigation).WithMany(p => p.Sanphamcts)
-                .HasForeignKey(d => d.Machatlieu)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__SANPHAMCT__MACHA__07C12930");
-
-            entity.HasOne(d => d.MaloaiNavigation).WithMany(p => p.Sanphamcts)
-                .HasForeignKey(d => d.Maloai)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__SANPHAMCT__MALOA__0C85DE4D");
-
             entity.HasOne(d => d.MamauNavigation).WithMany(p => p.Sanphamcts)
                 .HasForeignKey(d => d.Mamau)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__SANPHAMCT__MAMAU__08B54D69");
+                .HasConstraintName("FK__SANPHAMCT__MAMAU__3C69FB99");
 
             entity.HasOne(d => d.MasizeNavigation).WithMany(p => p.Sanphamcts)
                 .HasForeignKey(d => d.Masize)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__SANPHAMCT__MASIZ__3A4CA8FD");
+                .HasConstraintName("FK__SANPHAMCT__MASIZ__3E52440B");
 
             entity.HasOne(d => d.MaspNavigation).WithMany(p => p.Sanphamcts)
                 .HasForeignKey(d => d.Masp)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__SANPHAMCT__MASP__09A971A2");
-
-            entity.HasOne(d => d.MathuonghieuNavigation).WithMany(p => p.Sanphamcts)
-                .HasForeignKey(d => d.Mathuonghieu)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__SANPHAMCT__MATHU__0B91BA14");
-
-            entity.HasOne(d => d.MaxuatxuNavigation).WithMany(p => p.Sanphamcts)
-                .HasForeignKey(d => d.Maxuatxu)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__SANPHAMCT__MAXUA__0A9D95DB");
+                .HasConstraintName("FK__SANPHAMCT__MASP__3D5E1FD2");
         });
 
         modelBuilder.Entity<Size>(entity =>
         {
-            entity.HasKey(e => e.Masize).HasName("PK__SIZE__3DD4402B638DA858");
+            entity.HasKey(e => e.Masize).HasName("PK__SIZE__3DD4402B21BB97EE");
 
             entity.ToTable("SIZE");
 
@@ -576,7 +576,7 @@ public partial class VerssclubContext : DbContext
 
         modelBuilder.Entity<Thanhtoan>(entity =>
         {
-            entity.HasKey(e => e.Mathanhtoan).HasName("PK__THANHTOA__E5D8225C0FB93A6A");
+            entity.HasKey(e => e.Mathanhtoan).HasName("PK__THANHTOA__E5D8225CAF4E1865");
 
             entity.ToTable("THANHTOAN");
 
@@ -602,12 +602,12 @@ public partial class VerssclubContext : DbContext
             entity.HasOne(d => d.MahdNavigation).WithMany(p => p.Thanhtoans)
                 .HasForeignKey(d => d.Mahd)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__THANHTOAN__MAHD__2BFE89A6");
+                .HasConstraintName("FK__THANHTOAN__MAHD__5DCAEF64");
         });
 
         modelBuilder.Entity<Thuonghieu>(entity =>
         {
-            entity.HasKey(e => e.Mathuonghieu).HasName("PK__THUONGHI__B319F6385EF447F9");
+            entity.HasKey(e => e.Mathuonghieu).HasName("PK__THUONGHI__B319F6380D99287D");
 
             entity.ToTable("THUONGHIEU");
 
@@ -622,7 +622,7 @@ public partial class VerssclubContext : DbContext
 
         modelBuilder.Entity<Voucher>(entity =>
         {
-            entity.HasKey(e => e.Magiamgia).HasName("PK__VOUCHER__41C28439EE4D6FBD");
+            entity.HasKey(e => e.Magiamgia).HasName("PK__VOUCHER__41C284390897AF3E");
 
             entity.ToTable("VOUCHER");
 
@@ -647,7 +647,7 @@ public partial class VerssclubContext : DbContext
 
         modelBuilder.Entity<Xuatxu>(entity =>
         {
-            entity.HasKey(e => e.Maxuatxu).HasName("PK__XUATXU__52D93EA2D573971E");
+            entity.HasKey(e => e.Maxuatxu).HasName("PK__XUATXU__52D93EA2DB86FC4E");
 
             entity.ToTable("XUATXU");
 

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Repository.Migrations
 {
     /// <inheritdoc />
-    public partial class VerssDb : Migration
+    public partial class DB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,7 +20,7 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__CHATLIEU__80F939F813A47416", x => x.MACHATLIEU);
+                    table.PrimaryKey("PK__CHATLIEU__80F939F859DE3E74", x => x.MACHATLIEU);
                 });
 
             migrationBuilder.CreateTable(
@@ -32,7 +32,7 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__CHUCVU__9FA9FD6A7CBD95BE", x => x.MACHUCVU);
+                    table.PrimaryKey("PK__CHUCVU__9FA9FD6A63B82CA5", x => x.MACHUCVU);
                 });
 
             migrationBuilder.CreateTable(
@@ -50,7 +50,7 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__KHACHHAN__603F592C6C33E491", x => x.MAKH);
+                    table.PrimaryKey("PK__KHACHHAN__603F592C7A2F8725", x => x.MAKH);
                 });
 
             migrationBuilder.CreateTable(
@@ -62,7 +62,7 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__LOAI__2F633F23A1F0FFF5", x => x.MALOAI);
+                    table.PrimaryKey("PK__LOAI__2F633F233194CD20", x => x.MALOAI);
                 });
 
             migrationBuilder.CreateTable(
@@ -74,20 +74,7 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__MAU__7B7346CF71E376BB", x => x.MAMAU);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "SANPHAM",
-                columns: table => new
-                {
-                    MASP = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
-                    TENSP = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    TRANGTHAI = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__SANPHAM__60228A32309B7F3D", x => x.MASP);
+                    table.PrimaryKey("PK__MAU__7B7346CF4EDAB570", x => x.MAMAU);
                 });
 
             migrationBuilder.CreateTable(
@@ -99,7 +86,7 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__SIZE__3DD4402B638DA858", x => x.MASIZE);
+                    table.PrimaryKey("PK__SIZE__3DD4402B21BB97EE", x => x.MASIZE);
                 });
 
             migrationBuilder.CreateTable(
@@ -111,7 +98,7 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__THUONGHI__B319F6385EF447F9", x => x.MATHUONGHIEU);
+                    table.PrimaryKey("PK__THUONGHI__B319F6380D99287D", x => x.MATHUONGHIEU);
                 });
 
             migrationBuilder.CreateTable(
@@ -127,7 +114,7 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__VOUCHER__41C28439EE4D6FBD", x => x.MAGIAMGIA);
+                    table.PrimaryKey("PK__VOUCHER__41C284390897AF3E", x => x.MAGIAMGIA);
                 });
 
             migrationBuilder.CreateTable(
@@ -139,7 +126,7 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__XUATXU__52D93EA2D573971E", x => x.MAXUATXU);
+                    table.PrimaryKey("PK__XUATXU__52D93EA2DB86FC4E", x => x.MAXUATXU);
                 });
 
             migrationBuilder.CreateTable(
@@ -159,9 +146,9 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__NHANVIEN__603F511490E3C095", x => x.MANV);
+                    table.PrimaryKey("PK__NHANVIEN__603F511417A7B9BB", x => x.MANV);
                     table.ForeignKey(
-                        name: "FK__NHANVIEN__MACHUC__778AC167",
+                        name: "FK__NHANVIEN__MACHUC__286302EC",
                         column: x => x.MACHUCVU,
                         principalTable: "CHUCVU",
                         principalColumn: "MACHUCVU");
@@ -175,7 +162,7 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__GIOHANG__603F592CB7F9DAF2", x => x.MAKH);
+                    table.PrimaryKey("PK__GIOHANG__603F592C86B59871", x => x.MAKH);
                     table.ForeignKey(
                         name: "FK_GIOHANG_KHACHHANG",
                         column: x => x.MAKH,
@@ -206,57 +193,37 @@ namespace Repository.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SANPHAMCT",
+                name: "SANPHAM",
                 columns: table => new
                 {
-                    MASPCT = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
-                    SOLUONG = table.Column<int>(type: "int", nullable: false),
-                    GIA = table.Column<double>(type: "float", nullable: false),
-                    MACHATLIEU = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
-                    MAMAU = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
-                    TRANGTHAI = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    IMGURL = table.Column<string>(type: "varchar(max)", unicode: false, nullable: false),
                     MASP = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
+                    TENSP = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    TRANGTHAI = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    MACHATLIEU = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
                     MAXUATXU = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
                     MATHUONGHIEU = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
-                    MALOAI = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
-                    MASIZE = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false)
+                    MALOAI = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__SANPHAMC__3D158D86DA3BE69C", x => x.MASPCT);
+                    table.PrimaryKey("PK__SANPHAM__60228A32C0ACF9A8", x => x.MASP);
                     table.ForeignKey(
-                        name: "FK__SANPHAMCT__MACHA__07C12930",
+                        name: "FK__SANPHAM__MACHATL__36B12243",
                         column: x => x.MACHATLIEU,
                         principalTable: "CHATLIEU",
                         principalColumn: "MACHATLIEU");
                     table.ForeignKey(
-                        name: "FK__SANPHAMCT__MALOA__0C85DE4D",
+                        name: "FK__SANPHAM__MALOAI__398D8EEE",
                         column: x => x.MALOAI,
                         principalTable: "LOAI",
                         principalColumn: "MALOAI");
                     table.ForeignKey(
-                        name: "FK__SANPHAMCT__MAMAU__08B54D69",
-                        column: x => x.MAMAU,
-                        principalTable: "MAU",
-                        principalColumn: "MAMAU");
-                    table.ForeignKey(
-                        name: "FK__SANPHAMCT__MASIZ__3A4CA8FD",
-                        column: x => x.MASIZE,
-                        principalTable: "SIZE",
-                        principalColumn: "MASIZE");
-                    table.ForeignKey(
-                        name: "FK__SANPHAMCT__MASP__09A971A2",
-                        column: x => x.MASP,
-                        principalTable: "SANPHAM",
-                        principalColumn: "MASP");
-                    table.ForeignKey(
-                        name: "FK__SANPHAMCT__MATHU__0B91BA14",
+                        name: "FK__SANPHAM__MATHUON__38996AB5",
                         column: x => x.MATHUONGHIEU,
                         principalTable: "THUONGHIEU",
                         principalColumn: "MATHUONGHIEU");
                     table.ForeignKey(
-                        name: "FK__SANPHAMCT__MAXUA__0A9D95DB",
+                        name: "FK__SANPHAM__MAXUATX__37A5467C",
                         column: x => x.MAXUATXU,
                         principalTable: "XUATXU",
                         principalColumn: "MAXUATXU");
@@ -277,22 +244,76 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__HOADON__603F20CE82D3DF24", x => x.MAHD);
+                    table.PrimaryKey("PK__HOADON__603F20CEBE120F43", x => x.MAHD);
                     table.ForeignKey(
-                        name: "FK__HOADON__MAGIAMGI__25518C17",
+                        name: "FK__HOADON__MAGIAMGI__571DF1D5",
                         column: x => x.MAGIAMGIA,
                         principalTable: "VOUCHER",
                         principalColumn: "MAGIAMGIA");
                     table.ForeignKey(
-                        name: "FK__HOADON__MAKH__236943A5",
+                        name: "FK__HOADON__MAKH__5535A963",
                         column: x => x.MAKH,
                         principalTable: "KHACHHANG",
                         principalColumn: "MAKH");
                     table.ForeignKey(
-                        name: "FK__HOADON__MANV__245D67DE",
+                        name: "FK__HOADON__MANV__5629CD9C",
                         column: x => x.MANV,
                         principalTable: "NHANVIEN",
                         principalColumn: "MANV");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SANPHAMCT",
+                columns: table => new
+                {
+                    MASPCT = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
+                    SOLUONG = table.Column<int>(type: "int", nullable: false),
+                    GIA = table.Column<double>(type: "float", nullable: false),
+                    MAMAU = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
+                    TRANGTHAI = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    IMGURL = table.Column<string>(type: "varchar(max)", unicode: false, nullable: false),
+                    MASP = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
+                    MASIZE = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK__SANPHAMC__3D158D8655F960C8", x => x.MASPCT);
+                    table.ForeignKey(
+                        name: "FK__SANPHAMCT__MAMAU__3C69FB99",
+                        column: x => x.MAMAU,
+                        principalTable: "MAU",
+                        principalColumn: "MAMAU");
+                    table.ForeignKey(
+                        name: "FK__SANPHAMCT__MASIZ__3E52440B",
+                        column: x => x.MASIZE,
+                        principalTable: "SIZE",
+                        principalColumn: "MASIZE");
+                    table.ForeignKey(
+                        name: "FK__SANPHAMCT__MASP__3D5E1FD2",
+                        column: x => x.MASP,
+                        principalTable: "SANPHAM",
+                        principalColumn: "MASP");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "THANHTOAN",
+                columns: table => new
+                {
+                    MATHANHTOAN = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
+                    MAHD = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
+                    PHUONGTHUC = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    TONGTIEN = table.Column<double>(type: "float", nullable: false),
+                    TRANGTHAI = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    NGAYTHANHTOAN = table.Column<DateTime>(type: "datetime", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK__THANHTOA__E5D8225CAF4E1865", x => x.MATHANHTOAN);
+                    table.ForeignKey(
+                        name: "FK__THANHTOAN__MAHD__5DCAEF64",
+                        column: x => x.MAHD,
+                        principalTable: "HOADON",
+                        principalColumn: "MAHD");
                 });
 
             migrationBuilder.CreateTable(
@@ -309,14 +330,14 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__DANHGIA__8597D60A7BE0A90B", x => x.MADANHGIA);
+                    table.PrimaryKey("PK__DANHGIA__8597D60A651052BC", x => x.MADANHGIA);
                     table.ForeignKey(
-                        name: "FK__DANHGIA__MAKH__1BC821DD",
+                        name: "FK__DANHGIA__MAKH__4D94879B",
                         column: x => x.MAKH,
                         principalTable: "KHACHHANG",
                         principalColumn: "MAKH");
                     table.ForeignKey(
-                        name: "FK__DANHGIA__MASPCT__1CBC4616",
+                        name: "FK__DANHGIA__MASPCT__4E88ABD4",
                         column: x => x.MASPCT,
                         principalTable: "SANPHAMCT",
                         principalColumn: "MASPCT");
@@ -334,14 +355,40 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__GIOHANGC__0CCE71FE27BF5E53", x => x.MAGHCT);
+                    table.PrimaryKey("PK__GIOHANGC__0CCE71FEB37E77F4", x => x.MAGHCT);
                     table.ForeignKey(
-                        name: "FK__GIOHANGCT__MAKH__123EB7A3",
+                        name: "FK__GIOHANGCT__MAKH__440B1D61",
                         column: x => x.MAKH,
                         principalTable: "KHACHHANG",
                         principalColumn: "MAKH");
                     table.ForeignKey(
-                        name: "FK__GIOHANGCT__MASPC__1332DBDC",
+                        name: "FK__GIOHANGCT__MASPC__44FF419A",
+                        column: x => x.MASPCT,
+                        principalTable: "SANPHAMCT",
+                        principalColumn: "MASPCT");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "HOADONCT",
+                columns: table => new
+                {
+                    MAHDCT = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
+                    MAHD = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
+                    MASPCT = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
+                    SOLUONG = table.Column<double>(type: "float", nullable: false),
+                    TONGTIEN = table.Column<double>(type: "float", nullable: false),
+                    TRANGTHAI = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK__HOADONCT__1A700082B03A597D", x => x.MAHDCT);
+                    table.ForeignKey(
+                        name: "FK__HOADONCT__MAHD__59FA5E80",
+                        column: x => x.MAHD,
+                        principalTable: "HOADON",
+                        principalColumn: "MAHD");
+                    table.ForeignKey(
+                        name: "FK__HOADONCT__MASPCT__5AEE82B9",
                         column: x => x.MASPCT,
                         principalTable: "SANPHAMCT",
                         principalColumn: "MASPCT");
@@ -361,59 +408,12 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__PRODUCTD__CC3E72D0C63B4F46", x => x.MADISCOUNTS);
+                    table.PrimaryKey("PK__PRODUCTD__CC3E72D04981D3A8", x => x.MADISCOUNTS);
                     table.ForeignKey(
-                        name: "FK__PRODUCTDI__MASPC__2EDAF651",
+                        name: "FK__PRODUCTDI__MASPC__60A75C0F",
                         column: x => x.MASPCT,
                         principalTable: "SANPHAMCT",
                         principalColumn: "MASPCT");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "HOADONCT",
-                columns: table => new
-                {
-                    MAHDCT = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
-                    MAHD = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
-                    MASPCT = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
-                    SOLUONG = table.Column<double>(type: "float", nullable: false),
-                    TONGTIEN = table.Column<double>(type: "float", nullable: false),
-                    TRANGTHAI = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__HOADONCT__1A700082BC549E62", x => x.MAHDCT);
-                    table.ForeignKey(
-                        name: "FK__HOADONCT__MAHD__282DF8C2",
-                        column: x => x.MAHD,
-                        principalTable: "HOADON",
-                        principalColumn: "MAHD");
-                    table.ForeignKey(
-                        name: "FK__HOADONCT__MASPCT__29221CFB",
-                        column: x => x.MASPCT,
-                        principalTable: "SANPHAMCT",
-                        principalColumn: "MASPCT");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "THANHTOAN",
-                columns: table => new
-                {
-                    MATHANHTOAN = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
-                    MAHD = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: false),
-                    PHUONGTHUC = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    TONGTIEN = table.Column<double>(type: "float", nullable: false),
-                    TRANGTHAI = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    NGAYTHANHTOAN = table.Column<DateTime>(type: "datetime", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__THANHTOA__E5D8225C0FB93A6A", x => x.MATHANHTOAN);
-                    table.ForeignKey(
-                        name: "FK__THANHTOAN__MAHD__2BFE89A6",
-                        column: x => x.MAHD,
-                        principalTable: "HOADON",
-                        principalColumn: "MAHD");
                 });
 
             migrationBuilder.CreateTable(
@@ -429,14 +429,14 @@ namespace Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__ORDER__C8361541EDBF2273", x => x.MAORDER);
+                    table.PrimaryKey("PK__ORDER__C8361541552B4F2B", x => x.MAORDER);
                     table.ForeignKey(
-                        name: "FK__ORDER__MAGHCT__1F98B2C1",
+                        name: "FK__ORDER__MAGHCT__5165187F",
                         column: x => x.MAGHCT,
                         principalTable: "GIOHANGCT",
                         principalColumn: "MAGHCT");
                     table.ForeignKey(
-                        name: "FK__ORDER__MANV__208CD6FA",
+                        name: "FK__ORDER__MANV__52593CB8",
                         column: x => x.MANV,
                         principalTable: "NHANVIEN",
                         principalColumn: "MANV");
@@ -513,14 +513,24 @@ namespace Repository.Migrations
                 column: "MASPCT");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SANPHAMCT_MACHATLIEU",
-                table: "SANPHAMCT",
+                name: "IX_SANPHAM_MACHATLIEU",
+                table: "SANPHAM",
                 column: "MACHATLIEU");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SANPHAMCT_MALOAI",
-                table: "SANPHAMCT",
+                name: "IX_SANPHAM_MALOAI",
+                table: "SANPHAM",
                 column: "MALOAI");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SANPHAM_MATHUONGHIEU",
+                table: "SANPHAM",
+                column: "MATHUONGHIEU");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SANPHAM_MAXUATXU",
+                table: "SANPHAM",
+                column: "MAXUATXU");
 
             migrationBuilder.CreateIndex(
                 name: "IX_SANPHAMCT_MAMAU",
@@ -536,16 +546,6 @@ namespace Repository.Migrations
                 name: "IX_SANPHAMCT_MASP",
                 table: "SANPHAMCT",
                 column: "MASP");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_SANPHAMCT_MATHUONGHIEU",
-                table: "SANPHAMCT",
-                column: "MATHUONGHIEU");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_SANPHAMCT_MAXUATXU",
-                table: "SANPHAMCT",
-                column: "MAXUATXU");
 
             migrationBuilder.CreateIndex(
                 name: "IX_THANHTOAN_MAHD",
@@ -596,12 +596,6 @@ namespace Repository.Migrations
                 name: "NHANVIEN");
 
             migrationBuilder.DropTable(
-                name: "CHATLIEU");
-
-            migrationBuilder.DropTable(
-                name: "LOAI");
-
-            migrationBuilder.DropTable(
                 name: "MAU");
 
             migrationBuilder.DropTable(
@@ -611,13 +605,19 @@ namespace Repository.Migrations
                 name: "SANPHAM");
 
             migrationBuilder.DropTable(
+                name: "CHUCVU");
+
+            migrationBuilder.DropTable(
+                name: "CHATLIEU");
+
+            migrationBuilder.DropTable(
+                name: "LOAI");
+
+            migrationBuilder.DropTable(
                 name: "THUONGHIEU");
 
             migrationBuilder.DropTable(
                 name: "XUATXU");
-
-            migrationBuilder.DropTable(
-                name: "CHUCVU");
         }
     }
 }

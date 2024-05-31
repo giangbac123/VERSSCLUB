@@ -58,7 +58,7 @@ namespace Repository.Migrations
                         .HasColumnName("TENCHATLIEU");
 
                     b.HasKey("Machatlieu")
-                        .HasName("PK__CHATLIEU__80F939F813A47416");
+                        .HasName("PK__CHATLIEU__80F939F859DE3E74");
 
                     b.ToTable("CHATLIEU", (string)null);
                 });
@@ -78,7 +78,7 @@ namespace Repository.Migrations
                         .HasColumnName("VAITRO");
 
                     b.HasKey("Machucvu")
-                        .HasName("PK__CHUCVU__9FA9FD6A7CBD95BE");
+                        .HasName("PK__CHUCVU__9FA9FD6A63B82CA5");
 
                     b.ToTable("CHUCVU", (string)null);
                 });
@@ -123,7 +123,7 @@ namespace Repository.Migrations
                         .HasColumnName("SOSAO");
 
                     b.HasKey("Madanhgia")
-                        .HasName("PK__DANHGIA__8597D60A7BE0A90B");
+                        .HasName("PK__DANHGIA__8597D60A651052BC");
 
                     b.HasIndex("Makh");
 
@@ -141,7 +141,7 @@ namespace Repository.Migrations
                         .HasColumnName("MAKH");
 
                     b.HasKey("Makh")
-                        .HasName("PK__GIOHANG__603F592CB7F9DAF2");
+                        .HasName("PK__GIOHANG__603F592C86B59871");
 
                     b.ToTable("GIOHANG", (string)null);
                 });
@@ -177,7 +177,7 @@ namespace Repository.Migrations
                         .HasColumnName("TONGTIEN");
 
                     b.HasKey("Maghct")
-                        .HasName("PK__GIOHANGC__0CCE71FE27BF5E53");
+                        .HasName("PK__GIOHANGC__0CCE71FEB37E77F4");
 
                     b.HasIndex("Makh");
 
@@ -234,7 +234,7 @@ namespace Repository.Migrations
                         .HasColumnName("TRANGTHAI");
 
                     b.HasKey("Mahd")
-                        .HasName("PK__HOADON__603F20CE82D3DF24");
+                        .HasName("PK__HOADON__603F20CEBE120F43");
 
                     b.HasIndex("Magiamgia");
 
@@ -282,7 +282,7 @@ namespace Repository.Migrations
                         .HasColumnName("TRANGTHAI");
 
                     b.HasKey("Mahdct")
-                        .HasName("PK__HOADONCT__1A700082BC549E62");
+                        .HasName("PK__HOADONCT__1A700082B03A597D");
 
                     b.HasIndex("Mahd");
 
@@ -339,7 +339,7 @@ namespace Repository.Migrations
                         .HasColumnName("SDT");
 
                     b.HasKey("Makh")
-                        .HasName("PK__KHACHHAN__603F592C6C33E491");
+                        .HasName("PK__KHACHHAN__603F592C7A2F8725");
 
                     b.ToTable("KHACHHANG", (string)null);
                 });
@@ -359,7 +359,7 @@ namespace Repository.Migrations
                         .HasColumnName("TENLOAI");
 
                     b.HasKey("Maloai")
-                        .HasName("PK__LOAI__2F633F23A1F0FFF5");
+                        .HasName("PK__LOAI__2F633F233194CD20");
 
                     b.ToTable("LOAI", (string)null);
                 });
@@ -379,7 +379,7 @@ namespace Repository.Migrations
                         .HasColumnName("MAU");
 
                     b.HasKey("Mamau")
-                        .HasName("PK__MAU__7B7346CF71E376BB");
+                        .HasName("PK__MAU__7B7346CF4EDAB570");
 
                     b.ToTable("MAU", (string)null);
                 });
@@ -444,7 +444,7 @@ namespace Repository.Migrations
                         .HasColumnName("TRANGTHAI");
 
                     b.HasKey("Manv")
-                        .HasName("PK__NHANVIEN__603F511490E3C095");
+                        .HasName("PK__NHANVIEN__603F511417A7B9BB");
 
                     b.HasIndex("Machucvu");
 
@@ -488,7 +488,7 @@ namespace Repository.Migrations
                         .HasColumnName("TRANGTHAI");
 
                     b.HasKey("Maorder")
-                        .HasName("PK__ORDER__C8361541EDBF2273");
+                        .HasName("PK__ORDER__C8361541552B4F2B");
 
                     b.HasIndex("Maghct");
 
@@ -538,7 +538,7 @@ namespace Repository.Migrations
                         .HasColumnName("TRANGTHAI");
 
                     b.HasKey("Madiscounts")
-                        .HasName("PK__PRODUCTD__CC3E72D0C63B4F46");
+                        .HasName("PK__PRODUCTD__CC3E72D04981D3A8");
 
                     b.HasIndex("Maspct");
 
@@ -553,6 +553,34 @@ namespace Repository.Migrations
                         .HasColumnType("varchar(10)")
                         .HasColumnName("MASP");
 
+                    b.Property<string>("Machatlieu")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(10)")
+                        .HasColumnName("MACHATLIEU");
+
+                    b.Property<string>("Maloai")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(10)")
+                        .HasColumnName("MALOAI");
+
+                    b.Property<string>("Mathuonghieu")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(10)")
+                        .HasColumnName("MATHUONGHIEU");
+
+                    b.Property<string>("Maxuatxu")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(10)")
+                        .HasColumnName("MAXUATXU");
+
                     b.Property<string>("Tensp")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -566,7 +594,15 @@ namespace Repository.Migrations
                         .HasColumnName("TRANGTHAI");
 
                     b.HasKey("Masp")
-                        .HasName("PK__SANPHAM__60228A32309B7F3D");
+                        .HasName("PK__SANPHAM__60228A32C0ACF9A8");
+
+                    b.HasIndex("Machatlieu");
+
+                    b.HasIndex("Maloai");
+
+                    b.HasIndex("Mathuonghieu");
+
+                    b.HasIndex("Maxuatxu");
 
                     b.ToTable("SANPHAM", (string)null);
                 });
@@ -589,20 +625,6 @@ namespace Repository.Migrations
                         .HasColumnType("varchar(max)")
                         .HasColumnName("IMGURL");
 
-                    b.Property<string>("Machatlieu")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(10)")
-                        .HasColumnName("MACHATLIEU");
-
-                    b.Property<string>("Maloai")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(10)")
-                        .HasColumnName("MALOAI");
-
                     b.Property<string>("Mamau")
                         .IsRequired()
                         .HasMaxLength(10)
@@ -624,20 +646,6 @@ namespace Repository.Migrations
                         .HasColumnType("varchar(10)")
                         .HasColumnName("MASP");
 
-                    b.Property<string>("Mathuonghieu")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(10)")
-                        .HasColumnName("MATHUONGHIEU");
-
-                    b.Property<string>("Maxuatxu")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(10)")
-                        .HasColumnName("MAXUATXU");
-
                     b.Property<int>("Soluong")
                         .HasColumnType("int")
                         .HasColumnName("SOLUONG");
@@ -649,21 +657,13 @@ namespace Repository.Migrations
                         .HasColumnName("TRANGTHAI");
 
                     b.HasKey("Maspct")
-                        .HasName("PK__SANPHAMC__3D158D86DA3BE69C");
-
-                    b.HasIndex("Machatlieu");
-
-                    b.HasIndex("Maloai");
+                        .HasName("PK__SANPHAMC__3D158D8655F960C8");
 
                     b.HasIndex("Mamau");
 
                     b.HasIndex("Masize");
 
                     b.HasIndex("Masp");
-
-                    b.HasIndex("Mathuonghieu");
-
-                    b.HasIndex("Maxuatxu");
 
                     b.ToTable("SANPHAMCT", (string)null);
                 });
@@ -684,7 +684,7 @@ namespace Repository.Migrations
                         .HasColumnName("SIZE");
 
                     b.HasKey("Masize")
-                        .HasName("PK__SIZE__3DD4402B638DA858");
+                        .HasName("PK__SIZE__3DD4402B21BB97EE");
 
                     b.ToTable("SIZE", (string)null);
                 });
@@ -725,7 +725,7 @@ namespace Repository.Migrations
                         .HasColumnName("TRANGTHAI");
 
                     b.HasKey("Mathanhtoan")
-                        .HasName("PK__THANHTOA__E5D8225C0FB93A6A");
+                        .HasName("PK__THANHTOA__E5D8225CAF4E1865");
 
                     b.HasIndex("Mahd");
 
@@ -747,7 +747,7 @@ namespace Repository.Migrations
                         .HasColumnName("TENTHUONGHIEU");
 
                     b.HasKey("Mathuonghieu")
-                        .HasName("PK__THUONGHI__B319F6385EF447F9");
+                        .HasName("PK__THUONGHI__B319F6380D99287D");
 
                     b.ToTable("THUONGHIEU", (string)null);
                 });
@@ -785,7 +785,7 @@ namespace Repository.Migrations
                         .HasColumnName("TRANGTHAI");
 
                     b.HasKey("Magiamgia")
-                        .HasName("PK__VOUCHER__41C28439EE4D6FBD");
+                        .HasName("PK__VOUCHER__41C284390897AF3E");
 
                     b.ToTable("VOUCHER", (string)null);
                 });
@@ -805,7 +805,7 @@ namespace Repository.Migrations
                         .HasColumnName("XUATXU");
 
                     b.HasKey("Maxuatxu")
-                        .HasName("PK__XUATXU__52D93EA2D573971E");
+                        .HasName("PK__XUATXU__52D93EA2DB86FC4E");
 
                     b.ToTable("XUATXU", (string)null);
                 });
@@ -831,13 +831,13 @@ namespace Repository.Migrations
                         .WithMany("Danhgia")
                         .HasForeignKey("Makh")
                         .IsRequired()
-                        .HasConstraintName("FK__DANHGIA__MAKH__1BC821DD");
+                        .HasConstraintName("FK__DANHGIA__MAKH__4D94879B");
 
                     b.HasOne("Repository.Models.Sanphamct", "MaspctNavigation")
                         .WithMany("Danhgia")
                         .HasForeignKey("Maspct")
                         .IsRequired()
-                        .HasConstraintName("FK__DANHGIA__MASPCT__1CBC4616");
+                        .HasConstraintName("FK__DANHGIA__MASPCT__4E88ABD4");
 
                     b.Navigation("MakhNavigation");
 
@@ -861,13 +861,13 @@ namespace Repository.Migrations
                         .WithMany("Giohangcts")
                         .HasForeignKey("Makh")
                         .IsRequired()
-                        .HasConstraintName("FK__GIOHANGCT__MAKH__123EB7A3");
+                        .HasConstraintName("FK__GIOHANGCT__MAKH__440B1D61");
 
                     b.HasOne("Repository.Models.Sanphamct", "MaspctNavigation")
                         .WithMany("Giohangcts")
                         .HasForeignKey("Maspct")
                         .IsRequired()
-                        .HasConstraintName("FK__GIOHANGCT__MASPC__1332DBDC");
+                        .HasConstraintName("FK__GIOHANGCT__MASPC__44FF419A");
 
                     b.Navigation("MakhNavigation");
 
@@ -880,19 +880,19 @@ namespace Repository.Migrations
                         .WithMany("Hoadons")
                         .HasForeignKey("Magiamgia")
                         .IsRequired()
-                        .HasConstraintName("FK__HOADON__MAGIAMGI__25518C17");
+                        .HasConstraintName("FK__HOADON__MAGIAMGI__571DF1D5");
 
                     b.HasOne("Repository.Models.Khachhang", "MakhNavigation")
                         .WithMany("Hoadons")
                         .HasForeignKey("Makh")
                         .IsRequired()
-                        .HasConstraintName("FK__HOADON__MAKH__236943A5");
+                        .HasConstraintName("FK__HOADON__MAKH__5535A963");
 
                     b.HasOne("Repository.Models.Nhanvien", "ManvNavigation")
                         .WithMany("Hoadons")
                         .HasForeignKey("Manv")
                         .IsRequired()
-                        .HasConstraintName("FK__HOADON__MANV__245D67DE");
+                        .HasConstraintName("FK__HOADON__MANV__5629CD9C");
 
                     b.Navigation("MagiamgiaNavigation");
 
@@ -907,13 +907,13 @@ namespace Repository.Migrations
                         .WithMany("Hoadoncts")
                         .HasForeignKey("Mahd")
                         .IsRequired()
-                        .HasConstraintName("FK__HOADONCT__MAHD__282DF8C2");
+                        .HasConstraintName("FK__HOADONCT__MAHD__59FA5E80");
 
                     b.HasOne("Repository.Models.Sanphamct", "MaspctNavigation")
                         .WithMany("Hoadoncts")
                         .HasForeignKey("Maspct")
                         .IsRequired()
-                        .HasConstraintName("FK__HOADONCT__MASPCT__29221CFB");
+                        .HasConstraintName("FK__HOADONCT__MASPCT__5AEE82B9");
 
                     b.Navigation("MahdNavigation");
 
@@ -926,7 +926,7 @@ namespace Repository.Migrations
                         .WithMany("Nhanviens")
                         .HasForeignKey("Machucvu")
                         .IsRequired()
-                        .HasConstraintName("FK__NHANVIEN__MACHUC__778AC167");
+                        .HasConstraintName("FK__NHANVIEN__MACHUC__286302EC");
 
                     b.Navigation("MachucvuNavigation");
                 });
@@ -937,13 +937,13 @@ namespace Repository.Migrations
                         .WithMany("Orders")
                         .HasForeignKey("Maghct")
                         .IsRequired()
-                        .HasConstraintName("FK__ORDER__MAGHCT__1F98B2C1");
+                        .HasConstraintName("FK__ORDER__MAGHCT__5165187F");
 
                     b.HasOne("Repository.Models.Nhanvien", "ManvNavigation")
                         .WithMany("Orders")
                         .HasForeignKey("Manv")
                         .IsRequired()
-                        .HasConstraintName("FK__ORDER__MANV__208CD6FA");
+                        .HasConstraintName("FK__ORDER__MANV__52593CB8");
 
                     b.Navigation("MaghctNavigation");
 
@@ -956,68 +956,71 @@ namespace Repository.Migrations
                         .WithMany("Productdiscounts")
                         .HasForeignKey("Maspct")
                         .IsRequired()
-                        .HasConstraintName("FK__PRODUCTDI__MASPC__2EDAF651");
+                        .HasConstraintName("FK__PRODUCTDI__MASPC__60A75C0F");
 
                     b.Navigation("MaspctNavigation");
                 });
 
-            modelBuilder.Entity("Repository.Models.Sanphamct", b =>
+            modelBuilder.Entity("Repository.Models.Sanpham", b =>
                 {
                     b.HasOne("Repository.Models.Chatlieu", "MachatlieuNavigation")
-                        .WithMany("Sanphamcts")
+                        .WithMany("Sanphams")
                         .HasForeignKey("Machatlieu")
                         .IsRequired()
-                        .HasConstraintName("FK__SANPHAMCT__MACHA__07C12930");
+                        .HasConstraintName("FK__SANPHAM__MACHATL__36B12243");
 
                     b.HasOne("Repository.Models.Loai", "MaloaiNavigation")
-                        .WithMany("Sanphamcts")
+                        .WithMany("Sanphams")
                         .HasForeignKey("Maloai")
                         .IsRequired()
-                        .HasConstraintName("FK__SANPHAMCT__MALOA__0C85DE4D");
+                        .HasConstraintName("FK__SANPHAM__MALOAI__398D8EEE");
 
+                    b.HasOne("Repository.Models.Thuonghieu", "MathuonghieuNavigation")
+                        .WithMany("Sanphams")
+                        .HasForeignKey("Mathuonghieu")
+                        .IsRequired()
+                        .HasConstraintName("FK__SANPHAM__MATHUON__38996AB5");
+
+                    b.HasOne("Repository.Models.Xuatxu", "MaxuatxuNavigation")
+                        .WithMany("Sanphams")
+                        .HasForeignKey("Maxuatxu")
+                        .IsRequired()
+                        .HasConstraintName("FK__SANPHAM__MAXUATX__37A5467C");
+
+                    b.Navigation("MachatlieuNavigation");
+
+                    b.Navigation("MaloaiNavigation");
+
+                    b.Navigation("MathuonghieuNavigation");
+
+                    b.Navigation("MaxuatxuNavigation");
+                });
+
+            modelBuilder.Entity("Repository.Models.Sanphamct", b =>
+                {
                     b.HasOne("Repository.Models.Mau", "MamauNavigation")
                         .WithMany("Sanphamcts")
                         .HasForeignKey("Mamau")
                         .IsRequired()
-                        .HasConstraintName("FK__SANPHAMCT__MAMAU__08B54D69");
+                        .HasConstraintName("FK__SANPHAMCT__MAMAU__3C69FB99");
 
                     b.HasOne("Repository.Models.Size", "MasizeNavigation")
                         .WithMany("Sanphamcts")
                         .HasForeignKey("Masize")
                         .IsRequired()
-                        .HasConstraintName("FK__SANPHAMCT__MASIZ__3A4CA8FD");
+                        .HasConstraintName("FK__SANPHAMCT__MASIZ__3E52440B");
 
                     b.HasOne("Repository.Models.Sanpham", "MaspNavigation")
                         .WithMany("Sanphamcts")
                         .HasForeignKey("Masp")
                         .IsRequired()
-                        .HasConstraintName("FK__SANPHAMCT__MASP__09A971A2");
-
-                    b.HasOne("Repository.Models.Thuonghieu", "MathuonghieuNavigation")
-                        .WithMany("Sanphamcts")
-                        .HasForeignKey("Mathuonghieu")
-                        .IsRequired()
-                        .HasConstraintName("FK__SANPHAMCT__MATHU__0B91BA14");
-
-                    b.HasOne("Repository.Models.Xuatxu", "MaxuatxuNavigation")
-                        .WithMany("Sanphamcts")
-                        .HasForeignKey("Maxuatxu")
-                        .IsRequired()
-                        .HasConstraintName("FK__SANPHAMCT__MAXUA__0A9D95DB");
-
-                    b.Navigation("MachatlieuNavigation");
-
-                    b.Navigation("MaloaiNavigation");
+                        .HasConstraintName("FK__SANPHAMCT__MASP__3D5E1FD2");
 
                     b.Navigation("MamauNavigation");
 
                     b.Navigation("MasizeNavigation");
 
                     b.Navigation("MaspNavigation");
-
-                    b.Navigation("MathuonghieuNavigation");
-
-                    b.Navigation("MaxuatxuNavigation");
                 });
 
             modelBuilder.Entity("Repository.Models.Thanhtoan", b =>
@@ -1026,14 +1029,14 @@ namespace Repository.Migrations
                         .WithMany("Thanhtoans")
                         .HasForeignKey("Mahd")
                         .IsRequired()
-                        .HasConstraintName("FK__THANHTOAN__MAHD__2BFE89A6");
+                        .HasConstraintName("FK__THANHTOAN__MAHD__5DCAEF64");
 
                     b.Navigation("MahdNavigation");
                 });
 
             modelBuilder.Entity("Repository.Models.Chatlieu", b =>
                 {
-                    b.Navigation("Sanphamcts");
+                    b.Navigation("Sanphams");
                 });
 
             modelBuilder.Entity("Repository.Models.Chucvu", b =>
@@ -1066,7 +1069,7 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Repository.Models.Loai", b =>
                 {
-                    b.Navigation("Sanphamcts");
+                    b.Navigation("Sanphams");
                 });
 
             modelBuilder.Entity("Repository.Models.Mau", b =>
@@ -1104,7 +1107,7 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Repository.Models.Thuonghieu", b =>
                 {
-                    b.Navigation("Sanphamcts");
+                    b.Navigation("Sanphams");
                 });
 
             modelBuilder.Entity("Repository.Models.Voucher", b =>
@@ -1114,7 +1117,7 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Repository.Models.Xuatxu", b =>
                 {
-                    b.Navigation("Sanphamcts");
+                    b.Navigation("Sanphams");
                 });
 #pragma warning restore 612, 618
         }
