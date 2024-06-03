@@ -5,29 +5,29 @@ namespace Repository.Models;
 
 public partial class Hoadon
 {
-    public string Mahd { get; set; } = null!;
+    public int Mahoadon { get; set; }
 
-    public string Makh { get; set; } = null!;
+    public int Makhachhang { get; set; }
 
-    public string Manv { get; set; } = null!;
+    public int Mavoucher { get; set; }
 
-    public string Magiamgia { get; set; } = null!;
+    public int Manhanvien { get; set; }
+
+    public DateOnly Ngaytao { get; set; }
+
+    public bool Trangthai { get; set; }
 
     public string? Ghichu { get; set; }
 
-    public double Tongtien { get; set; }
-
-    public DateTime Ngaytao { get; set; }
-
-    public string? Trangthai { get; set; }
+    public decimal Tongtien { get; set; }
 
     public virtual ICollection<Hoadonct> Hoadoncts { get; set; } = new List<Hoadonct>();
 
-    public virtual Voucher MagiamgiaNavigation { get; set; } = null!;
+    public virtual Khachhang MakhachhangNavigation { get; set; } = null!;
 
-    public virtual Khachhang MakhNavigation { get; set; } = null!;
+    public virtual Nhanvien ManhanvienNavigation { get; set; } = null!;
 
-    public virtual Nhanvien ManvNavigation { get; set; } = null!;
+    public virtual Voucher MavoucherNavigation { get; set; } = null!;
 
     public virtual ICollection<Thanhtoan> Thanhtoans { get; set; } = new List<Thanhtoan>();
 }

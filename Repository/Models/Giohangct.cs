@@ -5,19 +5,19 @@ namespace Repository.Models;
 
 public partial class Giohangct
 {
-    public string Maghct { get; set; } = null!;
+    public int Magiohangct { get; set; }
 
-    public string Makh { get; set; } = null!;
+    public int Makhachhang { get; set; }
 
-    public string Maspct { get; set; } = null!;
+    public int Magiohang { get; set; }
 
     public int Soluong { get; set; }
 
-    public double Tongtien { get; set; }
+    public decimal Tongtien { get; set; }
 
-    public virtual Khachhang MakhNavigation { get; set; } = null!;
-
-    public virtual Sanphamct MaspctNavigation { get; set; } = null!;
+    public virtual Giohang MagiohangNavigation { get; set; } = null!;
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+
+    public virtual ICollection<Sanpham> Sanphams { get; set; } = new List<Sanpham>();
 }

@@ -5,29 +5,25 @@ namespace Repository.Models;
 
 public partial class Nhanvien
 {
-    public string Manv { get; set; } = null!;
+    public int Manhanvien { get; set; }
 
-    public string? Tenkhachhang { get; set; }
-
-    public bool Gioitinh { get; set; }
+    public string Tennhanvien { get; set; } = null!;
 
     public string Sdt { get; set; } = null!;
 
-    public string Diachi { get; set; } = null!;
+    public string Email { get; set; } = null!;
 
     public string Matkhau { get; set; } = null!;
 
-    public string Email { get; set; } = null!;
+    public int? Namsinh { get; set; }
 
-    public DateOnly Ngaysinh { get; set; }
+    public bool? Trangthai { get; set; }
 
-    public string Trangthai { get; set; } = null!;
-
-    public string Machucvu { get; set; } = null!;
+    public int? Machucvu { get; set; }
 
     public virtual ICollection<Hoadon> Hoadons { get; set; } = new List<Hoadon>();
 
-    public virtual Chucvu MachucvuNavigation { get; set; } = null!;
+    public virtual Chucvu? MachucvuNavigation { get; set; }
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }

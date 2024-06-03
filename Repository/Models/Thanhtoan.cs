@@ -5,17 +5,17 @@ namespace Repository.Models;
 
 public partial class Thanhtoan
 {
-    public string Mathanhtoan { get; set; } = null!;
+    public int Mathanhtoan { get; set; }
 
-    public string Mahd { get; set; } = null!;
+    public int Mahoadon { get; set; }
 
-    public string Phuongthuc { get; set; } = null!;
+    public int Phuongthucthanhtoan { get; set; }
 
-    public double Tongtien { get; set; }
+    public DateOnly Ngaythanhtoan { get; set; }
 
-    public string Trangthai { get; set; } = null!;
+    public bool Trangthai { get; set; }
 
-    public DateTime Ngaythanhtoan { get; set; }
+    public decimal Tongtien { get; set; }
 
-    public virtual Hoadon MahdNavigation { get; set; } = null!;
+    public virtual Hoadon MahoadonNavigation { get; set; } = null!;
 }

@@ -5,23 +5,27 @@ namespace Repository.Models;
 
 public partial class Sanpham
 {
-    public string Masp { get; set; } = null!;
+    public int Masanpham { get; set; }
 
-    public string Tensp { get; set; } = null!;
+    public int Magiohangct { get; set; }
 
-    public string Trangthai { get; set; } = null!;
+    public string Tensanpham { get; set; } = null!;
 
-    public string Machatlieu { get; set; } = null!;
+    public int Machatlieu { get; set; }
 
-    public string Maxuatxu { get; set; } = null!;
+    public int Maxuatxu { get; set; }
 
-    public string Mathuonghieu { get; set; } = null!;
+    public int Mathuonghieu { get; set; }
 
-    public string Maloai { get; set; } = null!;
+    public int Maloaisanpham { get; set; }
+
+    public bool Trangthai { get; set; }
 
     public virtual Chatlieu MachatlieuNavigation { get; set; } = null!;
 
-    public virtual Loai MaloaiNavigation { get; set; } = null!;
+    public virtual Giohangct MagiohangctNavigation { get; set; } = null!;
+
+    public virtual Loaisanpham MaloaisanphamNavigation { get; set; } = null!;
 
     public virtual Thuonghieu MathuonghieuNavigation { get; set; } = null!;
 

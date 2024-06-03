@@ -5,19 +5,19 @@ namespace Repository.Models;
 
 public partial class Hoadonct
 {
-    public string Mahdct { get; set; } = null!;
+    public int Mahoadonct { get; set; }
 
-    public string Mahd { get; set; } = null!;
+    public int Mahoadon { get; set; }
 
-    public string Maspct { get; set; } = null!;
+    public int Masanphamct { get; set; }
 
-    public double Soluong { get; set; }
+    public int Soluong { get; set; }
 
-    public double Tongtien { get; set; }
+    public decimal Tongtien { get; set; }
 
-    public string Trangthai { get; set; } = null!;
+    public bool Trangthai { get; set; }
 
-    public virtual Hoadon MahdNavigation { get; set; } = null!;
+    public virtual Hoadon MahoadonNavigation { get; set; } = null!;
 
-    public virtual Sanphamct MaspctNavigation { get; set; } = null!;
+    public virtual Sanphamct MasanphamctNavigation { get; set; } = null!;
 }

@@ -5,21 +5,21 @@ namespace Repository.Models;
 
 public partial class Danhgium
 {
-    public string Madanhgia { get; set; } = null!;
+    public int Madanhgia { get; set; }
 
-    public string Makh { get; set; } = null!;
+    public int? Masanphamct { get; set; }
 
-    public string Maspct { get; set; } = null!;
+    public int? Makhachhang { get; set; }
 
-    public string? Binhluan { get; set; }
+    public string? Mota { get; set; }
 
     public string? Hinhanh { get; set; }
 
-    public DateOnly Ngaydang { get; set; }
+    public DateOnly? Ngaydang { get; set; }
 
     public int? Sosao { get; set; }
 
-    public virtual Khachhang MakhNavigation { get; set; } = null!;
+    public virtual Khachhang? MakhachhangNavigation { get; set; }
 
-    public virtual Sanphamct MaspctNavigation { get; set; } = null!;
+    public virtual Sanphamct? MasanphamctNavigation { get; set; }
 }

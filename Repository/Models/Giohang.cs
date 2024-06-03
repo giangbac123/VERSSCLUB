@@ -5,7 +5,11 @@ namespace Repository.Models;
 
 public partial class Giohang
 {
-    public string Makh { get; set; } = null!;
+    public int Magiohang { get; set; }
 
-    public virtual Khachhang MakhNavigation { get; set; } = null!;
+    public int? Makhachhang { get; set; }
+
+    public virtual ICollection<Giohangct> Giohangcts { get; set; } = new List<Giohangct>();
+
+    public virtual Khachhang? MakhachhangNavigation { get; set; }
 }

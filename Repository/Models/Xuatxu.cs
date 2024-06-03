@@ -5,9 +5,11 @@ namespace Repository.Models;
 
 public partial class Xuatxu
 {
-    public string Maxuatxu { get; set; } = null!;
+    public int Maxuatxu { get; set; }
 
-    public string Xuatxu1 { get; set; } = null!;
+    public string Diadiemxuatxu { get; set; } = null!;
+
+    public virtual ICollection<Sanphamct> Sanphamcts { get; set; } = new List<Sanphamct>();
 
     public virtual ICollection<Sanpham> Sanphams { get; set; } = new List<Sanpham>();
 }

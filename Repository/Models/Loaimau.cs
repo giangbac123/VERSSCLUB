@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Repository.Models;
 
-public partial class Mau
+public partial class Loaimau
 {
-    public string Mamau { get; set; } = null!;
+    public int Mamau { get; set; }
 
-    public string Mau1 { get; set; } = null!;
+    public string Tenmau { get; set; } = null!;
 
     public virtual ICollection<Sanphamct> Sanphamcts { get; set; } = new List<Sanphamct>();
 }

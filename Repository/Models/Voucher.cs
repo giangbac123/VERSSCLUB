@@ -5,19 +5,23 @@ namespace Repository.Models;
 
 public partial class Voucher
 {
-    public string Magiamgia { get; set; } = null!;
+    public int Mavoucher { get; set; }
 
-    public string Tenma { get; set; } = null!;
+    public string Tenvoucher { get; set; } = null!;
 
-    public DateTime Batdau { get; set; }
+    public DateOnly Ngaytao { get; set; }
 
-    public DateTime Ketthuc { get; set; }
+    public DateOnly Ngaybatdau { get; set; }
 
-    public string Trangthai { get; set; } = null!;
+    public DateOnly Ngayketthuc { get; set; }
 
-    public double Phantramgiam { get; set; }
+    public bool? Trangthai { get; set; }
+
+    public double? Phantramgiam { get; set; }
 
     public virtual ICollection<Hoadon> Hoadons { get; set; } = new List<Hoadon>();
 
-    public virtual ICollection<Khachhang> Makhs { get; set; } = new List<Khachhang>();
+    public virtual ICollection<Sanphamct> Sanphamcts { get; set; } = new List<Sanphamct>();
+
+    public virtual ICollection<Khachhang> Makhachhangs { get; set; } = new List<Khachhang>();
 }

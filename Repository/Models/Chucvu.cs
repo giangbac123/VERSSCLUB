@@ -5,7 +5,7 @@ namespace Repository.Models;
 
 public partial class Chucvu
 {
-    public string Machucvu { get; set; } = null!;
+    public int Machucvu { get; set; }
 
     public string Vaitro { get; set; } = null!;
 

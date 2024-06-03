@@ -5,19 +5,19 @@ namespace Repository.Models;
 
 public partial class Order
 {
-    public string Maorder { get; set; } = null!;
+    public int Maorder { get; set; }
 
-    public string Maghct { get; set; } = null!;
+    public int Magiohangct { get; set; }
 
-    public string Manv { get; set; } = null!;
+    public int Manhanvien { get; set; }
 
-    public DateTime Ngaydat { get; set; }
+    public DateOnly Ngaydathang { get; set; }
 
-    public double Tongtien { get; set; }
+    public decimal TongTien { get; set; }
 
-    public string Trangthai { get; set; } = null!;
+    public bool TrangThai { get; set; }
 
-    public virtual Giohangct MaghctNavigation { get; set; } = null!;
+    public virtual Giohangct MagiohangctNavigation { get; set; } = null!;
 
-    public virtual Nhanvien ManvNavigation { get; set; } = null!;
+    public virtual Nhanvien ManhanvienNavigation { get; set; } = null!;
 }
