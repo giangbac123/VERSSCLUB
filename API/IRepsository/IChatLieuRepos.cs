@@ -2,11 +2,11 @@
 
 namespace API.IRepsository
 {
-    public interface ISanPhamRepos
+    public interface IChatLieuRepos
     {
         bool AddChatLieu(Chatlieu chatlieu);
         bool RemoveChatLieu(Guid id);
         bool UpdateChatLieu(Guid id , Chatlieu chatlieu);
-        list
+        List<Chatlieu> GetAll();
     }
 }
