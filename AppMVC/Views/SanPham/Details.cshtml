@@ -1,0 +1,101 @@
+﻿@model Repository.Models.Loaisanpham
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container w-75">
+    <nav class="row m-3" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Áo A</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="tab-content mb-3 d-flex justify-content-center" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="bg-warning card" style="height: 500px; width: 350px;">
+                        <img src="https://i.imgur.com/rAIW06X.jpg" class="rounded p-auto m-auto ">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <div class="bg-danger card" style="height: 500px; width: 350px;">
+                        <img src="https://i.imgur.com/rAIW06X.jpg" class="rounded p-auto m-auto">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                    <div class="bg-primary card" style="height: 500px; width: 350px;">
+                        <img src="https://i.imgur.com/rAIW06X.jpg" class="rounded p-auto m-auto">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="disabled" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                    <div class="bg-success card" style="height: 500px; width: 350px;">
+                        <img src="https://i.imgur.com/rAIW06X.jpg" class="rounded p-auto m-auto">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" d-flex justify-content-center">
+                    <div class="row" id="myTab" role="tablist">
+                        <button style="width: 50px; height: 50px;" class="col-md-3 active btn btn-light" id="home-tab" data-bs-toggle="list" href="#home" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="bi bi-0-circle-fill"></i></button>
+                        <button style="width: 50px; height: 50px;" class="col-md-3 btn btn-light" id="profile-tab" data-bs-toggle="list" href="#profile" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="bi bi-0-circle-fill"></i></button>
+                        <button style="width: 50px; height: 50px;" class="col-md-3 btn btn-light" id="contact-tab" data-bs-toggle="list" href="#contact" role="tab" aria-controls="contact-tab-pane" aria-selected="false"><i class="bi bi-0-circle-fill"></i></button>
+                        <button style="width: 50px; height: 50px;" class="col-md-3 btn btn-light" id="disabled-tab" data-bs-toggle="list" href="#disabled" role="tab" aria-controls="disabled-tab-pane" aria-selected="false"><i class="bi bi-0-circle-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h4 class="mb-3">Áo A</h4>
+            <p class="mb-3 fs-5 text-danger">49000</p>
+            <p class="mb-3 fw-bold fs-6">Màu</p>
+            <div class="row">
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                    <label class="btn btn-primary" for="option1"></label>
+                </div>
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                    <label class="btn btn-success" for="option2"></label>
+                </div>
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                    <label class="btn btn-secondary" for="option3"></label>
+                </div>
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                    <label class="btn btn-danger" for="option4"></label>
+                </div>
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
+                    <label class="btn btn-warning" for="option5"></label>
+                </div>
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
+                    <label class="btn btn-dark" for="option6"></label>
+                </div>
+            </div>
+            <p class="mb-3 fw-bold fs-6">Size</p>
+            <select class="form-select mb-3" style="width: 60%;" aria-label="Default select example">
+                <option selected>Chọn size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+            </select>
+            <p class="mb-3 fw-bold fs-6">Số lượng</p>
+            <input type="number" class="form-control mb-3" style="width: 20%;">
+            <div class="row mb-3">
+                <div class="col-10">
+                    <button class="btn btn-light w-100">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-light w-100"><i class="bi bi-heart-fill"></i></button>
+                </div>
+            </div>
+            <button class="btn btn-danger w-100">Mua ngay</button>
+        </div>
+    </div>
+</div>

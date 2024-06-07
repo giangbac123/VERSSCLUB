@@ -1,0 +1,129 @@
+﻿@model IEnumerable<Repository.Models.Sanpham>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<nav class="row m-3" aria-label="breadcrumb">
+    <div class="col-9">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Shop</li>
+        </ol>
+    </div>
+    <div class="col-3">
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Sắp xếp theo</option>
+            <option>Bán chạy nhất</option>
+            <option>Tên</option>
+            <option>Giá từ cao đến thấp</option>
+            <option>Giá từ cao đến thấp</option>
+        </select>
+    </div>
+</nav>
+<div class="row">
+    <!-- Cột cho tab -->
+    <div class="col-md-2" style="font-size: small;">
+        <h5 class="text-center text-secondary mb-1 ms-2">Duyệt theo</h5>
+        <div class="progress mb-1 mx-2" role="progressbar" aria-label="Basic example" style=" height: 7px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="50">
+            <div class="progress-bar bg-secondary" style="width: 50%;"></div>
+        </div>
+        <div class="list-group list-group-flush mb-1" id="myTab" role="tablist">
+            <a class="list-group-item list-group-item-action list-group-item-light active" id="home-tab" data-bs-toggle="list" href="#home" role="tab" aria-controls="home-tab-pane" aria-selected="true">Tất cả</a>
+            <a class="list-group-item list-group-item-action list-group-item-light" id="profile-tab" data-bs-toggle="list" href="#profile" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Loại áo A</a>
+            <a class="list-group-item list-group-item-action list-group-item-light" id="contact-tab" data-bs-toggle="list" href="#contact" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Loại áo B</a>
+            <a class="list-group-item list-group-item-action list-group-item-light" id="disabled-tab" data-bs-toggle="list" href="#disabled" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">Loại áo C</a>
+        </div>
+        <h5 class="text-center text-secondary mb-1 ms-2">Lọc theo</h5>
+        <div class="progress mb-1 mx-2" role="progressbar" aria-label="Basic example" style=" height: 7px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="50">
+            <div class="progress-bar bg-secondary" style="width: 50%;"></div>
+        </div>
+        <form class="mb-1 ms-2">
+            <div class="row mb-1 border-bottom">
+                <h6>Giá</h6>
+            </div>
+            <div class="row mb-1">
+                <div class="col-3">
+                    <p class="form-label">Từ:</p>
+                </div>
+                <div class="col-9">
+                    <input type="number" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-1">
+                <div class="col-3">
+                    <p class="form-label">Đến:</p>
+                </div>
+                <div class="col-9">
+                    <input type="number" class="form-control">
+                </div>
+            </div>
+        </form>
+        <form class="mb-1 ms-2">
+            <div class="row mb-1 border-bottom">
+                <h6>Màu</h6>
+            </div>
+            <div class="row mb-1">
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                    <label class="btn btn-primary" for="option1"></label>
+                </div>
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                    <label class="btn btn-success" for="option2"></label>
+                </div>
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                    <label class="btn btn-secondary" for="option3"></label>
+                </div>
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                    <label class="btn btn-danger" for="option4"></label>
+                </div>
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
+                    <label class="btn btn-warning" for="option5"></label>
+                </div>
+                <div class="col p-auto m-auto">
+                    <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
+                    <label class="btn btn-dark" for="option6"></label>
+                </div>
+            </div>
+        </form>
+        <form class="mb-1 ms-2">
+            <div class="row mb-1 border-bottom">
+                <h6>Size</h6>
+            </div>
+            <div class="row mb-1">
+                <select class="form-select p-auto m-auto" style="width: 60%;" aria-label="Default select example">
+                    <option selected>Chọn size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <!-- Cột cho nội dung của tab -->
+    <div class="col-md-10">
+        <!-- Nội dung của tab -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <table class="table table-bordered table-striped table-hover ">
+                    <h1>12345</h1>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                Profile content
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                Contact content
+            </div>
+            <div class="tab-pane fade" id="disabled" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                Disabled content
+            </div>
+        </div>
+    </div>
+</div>

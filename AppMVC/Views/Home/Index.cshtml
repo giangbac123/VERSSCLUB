@@ -1,8 +1,367 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="row">
-    <img src="https://i.pinimg.com/originals/bc/25/2c/bc252c09dbb769141896a6106cf44666.jpg" />
-</div>
-
+<div class="modal fade" id="quenmk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Quên mật khẩu</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Tài khoản</label>
+                            <input type="text" class="form-control" placeholder="Nhập số điện thoại hoặc email">
+                        </div>
+                        <div class="mb-3 row">
+                          <label class="form-label">Mã OTP</label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Nhập mã OTP">
+                          </div>
+                          <div class="col-md-4">
+                            <button type="submit" class="btn btn-warning w-100">Gửi mã</button>
+                          </div>  
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    
+                    <button class="btn btn-primary">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal fade" id="dangky" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Đăng ký</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Họ và tên</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Giới tính</label>
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>Chọn giới tính</option>
+                              <option value="true">Nam</option>
+                              <option value="false">Nữ</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 row">
+                          <div class="col-md">
+                            <label class="form-label">Ngày sinh</label>
+                            <input type="date" class="form-control" >
+                          </div>
+                          <div class="col-md">
+                            <label class="form-label">Số điện thoại</label>
+                            <input type="text" class="form-control" >
+                          </div>
+                        </div>
+                        <div class="mb-3 row">
+                          <div class="col-md">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" >
+                          </div>
+                          <div class="col-md">
+                            <label class="form-label">Địa chỉ</label>
+                            <input type="text" class="form-control" >
+                          </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary mb-3 w-100 py-md-2">Đăng ký</button>
+                        <div class="pt-3 border-top">
+                            <button class="w-100 py-md-2 btn btn-primary"><i class="bi bi-google"></i> Sign in with Google</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+      </div>
+        <div class="modal fade" id="dangnhap" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Đăng nhập</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Tài khoản</label>
+                          <input type="email" class="form-control" placeholder="Nhập số điện thoại hoặc email">
+                        </div>
+                        <div class="mb-3">
+                          <labelclass="form-label">Mật khẩu</labelclass=>
+                          <input type="password" class="form-control" placeholder="Nhập mật khẩu">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label class="form-check-label">Ghi nhớ đăng nhập</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-3 w-100 py-md-2">Đăng nhập</button>
+                        <div class=" pt-3 border-top">
+                            <button class="w-100 py-md-2 btn btn-primary"><i class="bi bi-google"></i> Sign in with Google</button>
+                        </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="row">
+            <img src="https://i.pinimg.com/originals/bc/25/2c/bc252c09dbb769141896a6106cf44666.jpg" />
+        </div>
+        <div class="row bg-secondary-subtle border-top border-bottom-3">
+            <p class="text-center mt-3 fs-4 fst-italic fw-semibold">FREE SHIPPING WORLWIDE</p>
+        </div>
+        <div class="row border-bottom mb-3 pb-3">
+            <h1 class="my-3 text-center">SALE</h1>
+            <div class="row">
+                <div id="carouselExample" class="carousel slide"  data-bs-ride="carousel" data-bs-interval="2000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Card title</h5>
+                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+          <h1 class="text-center">SẢN PHẨM</h1>
+          <div class="row mb-3">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Card title</h5>
+                  <p class="card-text text-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
